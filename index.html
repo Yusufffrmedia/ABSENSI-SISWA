@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Student Attendance System</h1>
+    </header>
+    <main class="main">
+        <div class="form-container">
+            <h2>Mark Your Attendance</h2>
+            <form id="attendance-form">
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="student-name" placeholder="Enter your name" required>
+
+                <label for="attendance-date">Date:</label>
+                <input type="date" id="attendance-date" name="attendance-date" required>
+
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="English">English</option>
+                    <option value="Physical Education">Physical Education</option>
+                </select>
+
+                <button type="submit">Mark Present</button>
+            </form>
+            <div id="success-message"></div>
+        </div>
+        <section class="attendance-log">
+            <h2>Attendance Log</h2>
+            <table id="attendance-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Subject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attendance data will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
